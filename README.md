@@ -33,6 +33,23 @@ docker ps
 docker ps -a
 ```
 
+### docker-compose.yaml file
+```bash
+version: '3'
+services:
+  todo-nodejs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile   # If your Dockerfile is in a different directory, adjust the path
+    ports:
+      - "8000:8000"  # Map host port to container port
+```
+
+```
+# To run the application
+docker-compose up
+```
+
 
 
 
